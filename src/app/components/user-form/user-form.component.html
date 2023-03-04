@@ -1,0 +1,26 @@
+<h1>Nuevo Usuario</h1>
+
+<form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()">
+  <div class="mb-3">
+    <label for="first_name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="first_name" formControlName="first_name">
+  </div>
+
+  <div class="mb-3">
+    <label for="last_name" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="last_name" formControlName="last_name">
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" formControlName="email">
+  </div>
+
+  <div class="mb-3">
+      <label for="image" class="form-label">Imagen de perfil</label>
+      <input class="form-control" type="url" id="image" formControlName="image">
+    </div>
+  
+    <input type="submit" value="Guardar" class="btn btn-secondary">
+</form>
+
