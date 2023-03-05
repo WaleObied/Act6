@@ -4,5 +4,11 @@
             <app-cards [miUser]="user"></app-cards>
         </article>
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination mt-4">
+          <li class="page-item"><button class="page-link" (click)="pPage(pagActual - 1)" [disabled]="pagActual === 1">Previous</button></li>
+          <li class="page-item"><button class="page-link" (click)="pPage(pagActual + 1)" [disabled]="pagActual === totalPages">Next</button></li>
+        </ul>
+    </nav>
 
 </section>

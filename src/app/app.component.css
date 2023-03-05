@@ -2,5 +2,6 @@ body {
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    max-width: 1440px;
+    max-width: 1040px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

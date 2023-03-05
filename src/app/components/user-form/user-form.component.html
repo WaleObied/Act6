@@ -1,6 +1,8 @@
-<h1>Nuevo Usuario</h1>
+<div class="formC">
+  <h1> {{ title }} usuario </h1>
+<app-notificaciones [mensaje]="mensaje" [type]="type"></app-notificaciones>
 
-<form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()">
+<form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()" class="formulario">
   <div class="mb-3">
     <label for="first_name" class="form-label">Nombre</label>
     <input type="text" class="form-control" id="first_name" formControlName="first_name">
@@ -21,6 +23,8 @@
       <input class="form-control" type="url" id="image" formControlName="image">
     </div>
   
-    <input type="submit" value="Guardar" class="btn btn-secondary">
+    <input type="submit" value="Guardar" class="btn btn-success">
 </form>
+
+</div>
 

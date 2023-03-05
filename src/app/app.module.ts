@@ -11,6 +11,7 @@ import { UserDetailsComponent } from './components/home/user-details/user-detail
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     C404Component,
     CardsComponent,
     UserDetailsComponent,
-    UserFormComponent
+    UserFormComponent,
+    NotificacionesComponent
   ],
   imports: [
     BrowserModule,

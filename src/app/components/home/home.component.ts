@@ -10,19 +10,28 @@ import { UsersService } from 'src/app/services/users.service';
 export class HomeComponent implements OnInit {
 
   arrUsers: User[] = [];
+  pagActual: number = 1;
+  totalPages: number = 1;
 
   constructor(private usersService: UsersService) {}
 
    async ngOnInit(): Promise<void> {
-    try{
-    let resp = await this.usersService.getAll();
-    this.arrUsers = resp.results;
-    //console.log(this.arrUsers);
-    }
-    catch(error){
-    console.log(error)
-    }
+    this.pPage();
   }
 
+  async pPage(pNum: number = 1): Promise<void> {
+
+    try{
+      let resp = await this.usersService.getAll(pNum)
+      console.log(resp);
+      this.pagActual = resp.page;
+      this.totalPages = resp.total_pages;
+      this.arrUsers = resp.results;
+      
+      }
+      catch(error){
+      console.log(error)
+      }
+  }
 
 }

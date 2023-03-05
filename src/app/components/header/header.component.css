@@ -1,0 +1,14 @@
+.nav {
+    background-color: rgba(0, 255, 0, 0.258);
+    border-bottom: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 5px 5px 5px #cccccc6f;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50px;
+    width: 100%;
+}
