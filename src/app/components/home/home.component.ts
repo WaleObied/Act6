@@ -23,15 +23,12 @@ export class HomeComponent implements OnInit {
 
     try{
       let resp = await this.usersService.getAll(pNum)
-      console.log(resp);
       this.pagActual = resp.page;
       this.totalPages = resp.total_pages;
-      this.arrUsers = resp.results;
-      
+      this.arrUsers = resp.results;  
       }
       catch(error){
       console.log(error)
-      }
+    }
   }
-
 }

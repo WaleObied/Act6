@@ -1,30 +1,45 @@
 <div class="formC">
   <h1> {{ title }} usuario </h1>
-<app-notificaciones [mensaje]="mensaje" [type]="type"></app-notificaciones>
+  <app-notificaciones [mensaje]="mensaje" [type]="type"></app-notificaciones>
 
-<form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()" class="formulario">
-  <div class="mb-3">
-    <label for="first_name" class="form-label">Nombre</label>
-    <input type="text" class="form-control" id="first_name" formControlName="first_name">
-  </div>
+  <form novalidate [formGroup]="userForm" (ngSubmit)="getDataForm()" class="formulario">
 
-  <div class="mb-3">
-    <label for="last_name" class="form-label">Apellido</label>
-    <input type="text" class="form-control" id="last_name" formControlName="last_name">
-  </div>
-
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" formControlName="email">
-  </div>
-
-  <div class="mb-3">
-      <label for="image" class="form-label">Imagen de perfil</label>
-      <input class="form-control" type="url" id="image" formControlName="image">
+    <div class="mb-3">
+      <label for="first_name" class="form-label">Nombre (*)</label>
+      <input type="text" class="form-control" id="first_name" formControlName="first_name">
+      <p class="error" *ngIf="check('first_name', 'required')">Este campo es obligatorio.</p>
+      <p class="error" *ngIf="check('first_name', 'minlength')">El nombre debe tener mínimo 3 letras.</p>
     </div>
-  
-    <input type="submit" value="Guardar" class="btn btn-success">
-</form>
 
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Apellido (*)</label>
+      <input type="text" class="form-control" id="last_name" formControlName="last_name">
+      <p class="error" *ngIf="check('last_name', 'required')">Este campo es obligatorio.</p>
+      <p class="error" *ngIf="check('last_name', 'minlength')">El apellido debe tener mínimo 2 letras.</p>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email (*)</label>
+      <input type="email" class="form-control" id="email" formControlName="email">
+      <p class="error" *ngIf="check('email', 'required')">Este campo es obligatorio.</p>
+      <p class="error" *ngIf="check('email', 'pattern')">Introduce un email válido.</p>
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Nombre de usuario(*)</label>
+      <input type="text" class="form-control" id="username" formControlName="username">
+      <p class="error" *ngIf="check('username', 'required')">Este campo es obligatorio.</p>
+      <p class="error" *ngIf="check('username', 'minlength')">El nombre de usuario debe tener mínimo 3 letras.</p>
+    </div>
+    
+    <div class="mb-3">
+        <label for="image" class="form-label">Imagen de perfil (*)</label>
+        <input class="form-control" type="url" id="image" formControlName="image">
+        <p class="error" *ngIf="check('image', 'required')">Este campo es obligatorio.</p>
+        <p class="error" *ngIf="check('image', 'pattern')">Introduce una Url válida.</p>
+      </div>
+    
+      <input type="submit" value="Guardar" class="btn btn-success" [disabled]="!userForm.valid">
+  </form>
 </div>
 

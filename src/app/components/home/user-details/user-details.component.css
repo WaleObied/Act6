@@ -2,8 +2,24 @@
     display: flex;
     width: 200px;
     height: 200px;
+    border-radius: 8px;
 }
 
 li {
     list-style: none;
+}
+
+.tarjeta {
+    display: flex;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    box-shadow: 5px 5px 5px #9be8657d;
+    background-color: rgba(178, 178, 176, 0.158);
+}
+
+.emailU {
+    color: #827f7f;
 }

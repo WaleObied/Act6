@@ -22,10 +22,19 @@ export class UserDetailsComponent {
       console.log(id);
       let res: any = await this.servicioUser.getById(id);
       this.user = res;
-      console.log(res);
-
-      
+      console.log(res);   
   })
 }
 
+async deleteUser(pId: string | undefined): Promise<void> {
+  if(pId !== undefined) {
+    try {
+      let response = await this.servicioUser.delete(pId);
+      
+        confirm('¿Esta seguro que desea borrar este usuario?')
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
 }

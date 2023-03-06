@@ -1,7 +1,16 @@
-body {
+* {
     margin: 0 auto;
     padding: 0 auto;
     box-sizing: border-box;
-    max-width: 1040px;
+    max-width: 1440px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+    background-color: rgba(0, 255, 0, 0.258);
+    border-top: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px #cccccc6f;
+    color: #7f7b7b;
 }

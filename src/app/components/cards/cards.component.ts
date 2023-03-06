@@ -15,21 +15,6 @@ export class CardsComponent {
     
   }
 
-  /*async deleteUser(pId: string | undefined): Promise<void> {
-    if(pId !== undefined) {
-      try {
-        let response = await this.usersServices.delete(pId);
-        console.log(response);
-        if(!response) {
-          alert('Usuario borrado correctamente')
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    
-  }*/
-
-
 async deleteUser(pId: string | undefined): Promise<void> {
   if(pId !== undefined) {
     try {
@@ -39,7 +24,6 @@ async deleteUser(pId: string | undefined): Promise<void> {
     } catch (error) {
       console.log(error);
     }
-  
-}
-}
+    }
+  }
 }

@@ -2,8 +2,7 @@
     margin: 0 auto;
     max-width: 70%;
     width: 100%;
-    text-align: left;
-    
+    text-align: left;  
 }
 
 .formC {
@@ -11,3 +10,19 @@
    font-family: serif;
 }
 
+.error {
+    color: rgba(255, 0, 0, 0.604);
+    font-size: 14px;
+}
+
+input.ng-invalid.ng-touched {
+    border-bottom: 3px solid tomato;
+}
+
+input.ng-valid.ng-touched {
+    border-bottom: 3px solid lightgreen;
+}
+
+input {
+    box-shadow: 5px 5px 5px #cccccc56;
+}

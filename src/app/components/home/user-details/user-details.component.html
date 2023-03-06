@@ -1,14 +1,19 @@
 <section class="container mt-3">
-    <div class="card p-3">
+    <div class="card p-3, tarjeta">
+        <span> {{user?.username}} </span>
+        <hr>
         <figure>
         <img [src]="user?.image" alt="user?.first_name" class="imgUsuario">
         </figure>
         <ul>
             <li> {{user?.first_name}} </li>
-            <li> {{user?.last_name}} </li>
-            <li> {{user?.email}} </li>
+            <li> {{user?.last_name}} </li>  
+            <li class="emailU"> {{user?.email}} </li>
         </ul>
-        <button class="btn btn-secondary" [routerLink]="['/home']" >Volver a Home</button>
+        <div class="d-flex justify-content-between p-2 m-2">
+            <button class="btn btn-outline-secondary m-1" [routerLink]="['/home']" >Volver a Home</button>
+            <button [routerLink]="['/update', user?._id]" class="btn btn-outline-success m-1">Actualizar</button>
+            <button class="btn btn-outline-danger m-1" (click)="deleteUser(user?._id)">Borrar</button>
+        </div>  
     </div>
-
 </section>
